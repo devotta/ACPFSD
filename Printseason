@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		int Number=25;
+		Scanner inp = new Scanner(System.in);
+		//0 to quit when the number is zero
+	    do
+	    {
+    		System.out.print("Enter a month(1-12) or (0-> quit) : ");
+    		Number = inp.nextInt();
+        	switch(Number)
+        	{
+        	 case 11:case 12: case 1:
+                System.out.println("Winter");
+                break;
+              case 2:case 3:
+                System.out.println("Spring");
+                break;
+              case 4:case 5:case 6:case 7:case 8:
+                System.out.println("Summer");
+                break;
+              case 9:case 10:
+                System.out.println("Autumn");
+                break;
+               default:
+                System.out.println("Program halted");
+
+        	}
+
+	    } while (Number!=0);
+	}
+}

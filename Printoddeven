@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		int Number=25;
+		Scanner inp = new Scanner(System.in);
+		//0 to quit when the number is zero
+	    do
+	    {
+    		System.out.print("Enter a number : ");
+    		Number = inp.nextInt();
+    		if (Number%2==0)
+    		{
+    		    System.out.println(Number+" is an Even Number");
+    		}
+    		else
+    		{
+    		    System.out.println(Number +" is an Odd Number");
+    		}
+	    } while (Number!=0);
+	}
+}

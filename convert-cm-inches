@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Main
+{
+
+    public static void centi_to_inch(int cm)
+    {
+
+        System.out.println(cm/2.54);
+        System.out.println(" inches");
+       // return null;
+    };
+
+    public static void inch_to_centi(double inch)
+    {
+        System.out.print( inch*2.54);
+        System.out.println(" centimeters");
+       // return null;
+    };
+
+
+	public static void main(String[] args) {
+		int Number,cm;
+		double inch;
+		Scanner inp = new Scanner(System.in);
+		//0 to quit when the number is zero
+	    do
+	    {
+    		System.out.println(" 1 -> Centimeter to inch  ");
+    		System.out.println(" 2 -> Inch to Centimeter");
+    		System.out.println(" 0 -> Quit ");
+    	    System.out.print("Enter your choice:");
+    		Number = inp.nextInt();
+
+    		if ((Number>2) && (Number<0))
+    		{
+    		    System.out.println("Invalid Entry");
+    		}
+    		else
+    		{
+    		    if (Number==1)
+    		    {
+    		        System.out.println("Enter the centimeter");
+    		        cm=inp.nextInt();
+    		        centi_to_inch(cm);
+
+    		    }
+    		    if (Number==2)
+    		    {
+    		        System.out.println("Enter the inches");
+    		        inch=inp.nextDouble();
+    		        inch_to_centi(inch);
+    		    }
+	        }
+	    }
+	    while (Number!=0);
+
+	}
+
+}
